@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rólunk</title>
+    <link rel="stylesheet" href="/lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/hami_icon.jpg">
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div class="container" id="weatherWidget">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3  id="day-label">Időjárás<span class="temp">12 °C</span> </h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <select class="form-control" name="day" id="day">
+                            <option value="0" selected>Hétfő</option>
+                            <option value="1">Kedd</option>
+                            <option value="2">Szerda</option>
+                            <option value="3">Csütörtök</option>
+                            <option value="4">Péntek</option>
+                            <option value="5">Szombat</option>
+                            <option value="6">Vasárnap</option>
+                        </select>
+                        <div>
+
+                            <input type="radio" name="balance" id="celsius" value="celsius" checked>
+                            <label for="celsius">Celsius</label>
+                            <input type="radio" name="balance" id="fahrenheit" value="fahrenheit">
+                            <label for="fahrenheit">Fahrenheit</label><br>
+                            <button onclick="showWidget(), loadStatistics()" id="day-btn" class="btn btn-outline-secondary" type="button">Mutasd</button>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <span class="daily-offer"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3  id="day-label"><span class="min-temp">0 °C</span></h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3  id="day-label"><span class="max-temp">0 °C</span></h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3  id="day-label"><span class="avg-temp">0 °C</span></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="box">
+                <a href="about.html">Rólunk</a>
+            </div>
+            <div class="box">
+                <a href="menu.html">Menü</a>
+            </div>
+            <div class="box">
+                <a href="order-form.html">Rendelés</a>
+            </div>
+            <div class="box">
+                <a href="action.html">Akciók</a>
+            </div>
+        </div>
+
+        <div class="details">
+
+            <h1>Elérhetőségünk</h1>
+
+            <h2>Címünk</h2>
+            <p>2347 Bugyi, Sport utca 2.</p>
+
+            <h2>Telefonszám</h2>
+            <p>06 80 555-555</p>
+
+            <table>
+                <caption>Nyitvatartás</caption>
+                <thead>
+                    <tr>
+                        <th>Nap</th>
+                        <th>Nyitás</th>
+                        <th>Zárás</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hétfő - Péntek</td>
+                        <td>09:00</td>
+                        <td rowspan="2">21:00</td>
+                    </tr>
+                    <tr>
+                        <td>Szombat</td>
+                        <td>10:00</td>
+                    </tr>
+                    <tr>
+                        <td>Vasárnap</td>
+                        <td colspan="2">Zárva</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <h2>Térkép</h2>
+        </div>
+        <img id="map" src="/img/map.jpg" alt="map">
+        
+        <footer>
+            <tr>
+                <td colspan="3">
+                    &copy; 2020
+                </td>
+            </tr>
+        </footer>
+    </div>
+    <script src="/js/weather.js"></script>
+
+</body>
+
+</html>
